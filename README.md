@@ -1,4 +1,5 @@
 # IvanZealer
 <p>ivan zolo stealer</p>
-![image](https://github.com/chopa113/ivanzealer/assets/102317425/89ba5f8c-115f-49a2-b1eb-f989b0eba1c6)
+![image](https://github.com/chopa113/ivanzealer/assets/102317425/8feee36e-22f6-4d9c-bf12-415d07bb15e2)
+
 
