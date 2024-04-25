@@ -10,6 +10,9 @@ import time
 import browser_cookie3
 
 
+
+#TODO: change someone else's library to your own code (you need to work with sqlite)
+
 class Main():
     def __init__(self):
         self.token = input("input your Telegram token: ")
